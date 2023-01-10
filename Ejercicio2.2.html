@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2.2</title>
+</head>
+<body>
+    <style>
+        h1{
+            color: blue;
+            background-color: black;
+        }
+    </style>
+    <script>
+        function compruebaCategoría(){
+            var edad=document.getElementById("edad").value;
+            if(edad>=6 & edad<=7){
+                console.log("Benjamín");
+                document.getElementById("salida").innerHTML="<h2> Benjamín </h2>"
+            }else if(edad>=8 & edad<=9){
+                console.log("Alevín");
+                document.getElementById("salida").innerHTML="<h2> Alevín </h2>"
+            }else if(edad>=10 & edad<=11){
+                console.log("Infantil");
+                document.getElementById("salida").innerHTML="<h2> Infantil </h2>"
+            }else if(edad>=12){
+                console.log("Cadete");
+                document.getElementById("salida").innerHTML="<h2> Cadete </h2>"
+            }else{
+                console.log("No pertenece a ninguna categoría");
+                document.getElementById("salida").innerHTML="<h2> No pertenece a ninguna categoría </h2>"
+            }
+        }
+
+    </script>
+    <h1>Categoría Deportiva</h1>
+    Categoría:<input type="number" id="edad"> <br>
+    <input type="button" value="Enviar" onclick="compruebaCategoría()">
+    <span id="salida"></span>
+</body>
+</html>
