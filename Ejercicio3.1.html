@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.1</title>
+</head>
+<style>
+    #salida{
+        color: green;
+    }
+</style>
+<body>
+    <style>
+        h1{
+            color: blue;
+            background-color: black;
+        }
+    </style>
+    <script>
+        function tablaMultiplicar(){
+            var num=document.getElementById("num").value;
+            for(var i=0;i<=10; i++){
+                var total= num*i
+                document.getElementById("salida").innerHTML += num+" x "+i+" = "+total+"<br>"
+                console.log(num+" x "+i+" = "+total)
+            }
+        }
+    </script>
+    <h1>Tablas de Multiplicar</h1>
+    <input type="number" id="num"> <br>
+    <input type="button" value="Tabla de Multiplicar" onclick="tablaMultiplicar()">
+    <br>
+    <span id="salida"></span>
+</body>
+</html>
