@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.2</title>
+</head>
+<style>
+    #salida{
+        color: green;
+    }
+</style>
+<body>
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+    <script>
+        function multiplosdetres(){
+            var num=document.getElementById("num").value;
+            var total=0
+            for(var i=1;i<=num;i++){
+                if(i%3==0){
+                    total = total + 1
+                }
+            }
+        document.getElementById("salida").innerHTML = "El "+num+" tiene "+total+" múltiplos de 3"
+        console.log("El "+num+" tiene "+i+" múltiplos de 3")
+        }
+    </script>
+    <h1>Múltiplos de 3</h1>
+    <input type="number" id="num"> <br>
+    <input type="button" value="Múltiplos" onclick="multiplosdetres()">
+    <br>
+    <span id="salida"></span>
+</body>
+</html>
