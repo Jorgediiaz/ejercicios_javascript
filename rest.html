@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi primera llamada REST</title>
+    </head>
+    <body>
+        <img src="https://cdn.pixabay.com/photo/2022/05/24/07/39/lego-7217829_960_720.jpg">
+         <script>
+            fetch('https://swapi.dev/api/people/1/')
+            .then(response => response.json())
+            .then((data) => {
+                var h1 = document.createElement("h1");
+
+                h1.innerHTML = data.name;
+
+                document.body.appendChild(h1);
+
+                var p = document.createElement("p");
+                p.innerHTML = "Altura: " + data.height + "cm <br> peso: " + data.mass + "kg <br> color de cabello: " + data.hair_color;
+                document.body.appendChild(p);
+                })
+            .catch(error => {
+            console.log('Error:', error);
+            });
+        </script>
+    </body>
+</html>
