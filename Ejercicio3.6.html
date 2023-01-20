@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina</title>
+</head>
+<body>
+    <script>
+        //Funcion para conseguir numero random
+        function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+        }
+        //Función para saber si acierta
+        function aciertaono(num){
+            var oportunidades =3
+            for(var i=num;oportunidades>0;i++){
+                if(generarandom==num){
+                    document.getElementById("salida").innerHTML = "Has acertado";
+                }else if(generarandom!=num){
+                    oportunidades=-1
+                    document.getElementById("salida").innerHTML = "Intentalo de nuevo";
+                }
+            }
+        }
+        //Numero random max=100
+        var generarandom= getRandomInt(100);
+        console.log(generarandom);
+    </script>
+    
+    <h1>Adivina</h1>
+    <p>Tienes 3 oportunidades para coseguir acertar el numero</p>
+    <label for="num"></label><input type="number" id="num"> <br>
+    <input type="button" value="Jugar" onclick="aciertaono(getRandomInt)">
+    <br>
+    <span id="salida"></span>
+</body>
+</html>
