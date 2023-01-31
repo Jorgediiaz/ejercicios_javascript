@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.4</title>
+    <style>
+        h1{
+            color: blue;
+        }
+        .etiqueta{
+            color: purple
+        }
+        #salida{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    function calcula(){
+	    let numero=parseInt(document.getElementById("numero").value);
+        if(esPrimo(numero)){
+            document.getElementById("salida").innerHTML="Es primo";
+        }else{
+            document.getElementById("salida").innerHTML="No es primo";
+        }
+    }
+
+/*Esta función nos devuelve true o false dependiendo de si es primo o no*/
+
+    function esPrimo(n){
+        var i=2;
+
+        for(var i=2;i<n;i++){
+            if(n%i==0){
+                return false
+            }
+        }
+        return true
+    }
+
+    </script>
+    <h1>¿Primo?</h1>
+    <label class="etiqueta" for="numero">Numero</label>
+    <input type="number" id="numero">
+    <input type="button" value="¿Es primo?" onclick="calcula()">
+    <br>
+    <span id="salida"></span>
+</body>
+</html>
